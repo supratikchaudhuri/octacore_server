@@ -2,18 +2,23 @@
   "name": "octacore_test",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@moralisweb3/common-evm-utils": "^2.21.0",
     "alchemy-sdk": "^2.8.3",
     "axios": "^1.4.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "ethers": "^6.4.0",
+    "express": "^4.18.2",
+    "moralis": "^2.21.0",
+    "nodemon": "^2.0.22",
     "octacore-test": "^1.0.1",
     "web3": "^1.10.0"
   }
