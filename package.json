@@ -1,0 +1,20 @@
+{
+  "name": "octacore_test",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alchemy-sdk": "^2.8.3",
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "ethers": "^6.4.0",
+    "octacore-test": "^1.0.1",
+    "web3": "^1.10.0"
+  }
+}
