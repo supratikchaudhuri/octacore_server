@@ -1,4 +1,3 @@
-// require('dotenv').config()
 const axios = require("axios");
 
 const Moralis = require("moralis").default;
@@ -63,7 +62,6 @@ exports.getAllAssetsByAddress = async (req, res) => {
     const address = req.query.address;
     const input = new octacore.ModelsAddressReq(address,["eth"]);
     const response = await instance.getAllAssetsByAddress(input);
-    console.log(response);
 
     res.status(200).json(response.body);
 
