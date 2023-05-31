@@ -9,6 +9,7 @@ const MORALIS_API_KEY = process.env.MORALIS_API_KEY;
 
 const accountRoutes = require("./routes/accounts")
 const transactionRoutes = require("./routes/transactions")
+const ensRoutes = require("./routes/ens")
 
 // app.use(express.json()); //parsing http data
 app.use(express.json({ limit: "30mb", extended: true }));
@@ -27,7 +28,7 @@ app.use((req, res, next) => {
 
 app.use("/accounts", accountRoutes);
 app.use("/transactions", transactionRoutes);
-
+app.use("/ens", ensRoutes);
 
 
 app.listen(PORT, async () => {

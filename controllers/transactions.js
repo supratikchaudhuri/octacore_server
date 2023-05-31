@@ -48,7 +48,6 @@ exports.getTransactionByBlockHashAndIndex = async (req, res) => {
     const index = req.query.index;
     const input = new octacore.ModelsHashIndex(blockHash, parseInt(index) || 1, ["eth"]); 
     const response = await instance.getTransactionByBlockHashAndIndex(input);
-
     res.status(200).json(response.body);
 
   } catch (err) {
