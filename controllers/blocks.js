@@ -23,7 +23,6 @@ exports.getAllTxnByBlockHash = async (req, res) => {
 exports.getAllTxnByBlockNo = async (req, res) => {
   try {
     const blockNo = req.query.blockNo;
-    console.log(blockNo);
     const input = new octacore.ModelsBlockNumber(parseInt(blockNo), ["eth"]); 
     const response = await instance.getAllTransactionsByBlockNumber(input);
 
@@ -65,7 +64,7 @@ exports.getBlockHeaderByBlockHash = async (req, res) => {
     const blockHash = req.query.blockHash;
     const input = new octacore.ModelsHash(blockHash,["eth"]);
     const response = await instance.getBlockHeaderByHash( input);
-    res.status(200).json(reponse.body);
+    res.status(200).json(response.body);
 
   } catch (err) {
     res.status(503).json(err);
